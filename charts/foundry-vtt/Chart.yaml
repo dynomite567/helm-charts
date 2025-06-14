@@ -2,6 +2,7 @@ apiVersion: v2
 name: foundry-vtt
 description: Foundry Virtual Tabletop
 type: application
+icon: https://artifacthub.io/image/3e8ce5cf-7afe-4032-bae2-500b17e64b11@1x
 version: 13.345.0
 appVersion: "v13.345"
 keywords:
@@ -15,3 +16,4 @@ sources:
   - https://github.com/dynomite567/helm-charts/tree/main/foundry-vtt
 maintainers:
   - name: dynomite567
+    email: hc@dynomitecent.mozmail.com
