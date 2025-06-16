@@ -100,7 +100,7 @@ container:
   cacheSize: 1
 
   ## `gid` the deamon will be run under. Default is `foundry`
-  gid: 421
+  gid: 1000
 
   ## Set a path to a directory of shell scripts to be sourced after Foundry is installed but before it is started. The path should be in /data or another persistent mount point in the container. e.g.; /data/container_patches Patch files are sourced in lexicographic order. CONTAINER_PATCHES are processed after CONTAINER_PATCH_URLS.
   patches: /data/patches
@@ -121,7 +121,7 @@ container:
   timezone: UTC
 
   ## `uid` the daemon will be run under. Default is `foundry`
-  uid: 421
+  uid: 1000
 
   ## Set to `true` to enable verbose logging for the container utility scripts. Default is false
   verbose: false
