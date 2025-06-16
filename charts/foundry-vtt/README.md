@@ -11,7 +11,7 @@
 ## Introduction
 
 You can get a [FoundryVTT](https://foundryvtt.com) instance up and running in
-minutes using this chart and Felddy [foundryvtt-docker](https://github.com/felddy/foundryvtt-docker) Docker container.
+minutes using this chart and the Felddy [foundryvtt-docker](https://github.com/felddy/foundryvtt-docker) Docker container. Please note that this chart is modified to work  **for FoundryVTT v13 and above.** 
 
 ## Prerequisites
 
@@ -28,13 +28,13 @@ $ helm repo add foundry-vtt https://dynomite567.github.io/helm-charts/
 
 The quickest way to install the chart is to run:
 ```bash
-$ helm install my-release foundry-vtt/foundry-vtt
+$ helm install foundry-vtt foundry-vtt/foundry-vtt
 ```
 
 or
 
 ```bash
-$ helm install my-release \
+$ helm install foundry-vtt \
     --set foundryvtt.adminPassword='MyPa$$word' \
     --set foundryvtt.username='my-foundry-website-user' \
     --set foundryvtt.password='my-foundry-website-user-pass' \
@@ -46,7 +46,7 @@ $ helm install my-release \
 or
 
 ```bash
-$ helm install my-release foundry-vtt/foundry-vtt -f foundry-vtt/values.yaml
+$ helm install foundry-vtt foundry-vtt/foundry-vtt -f foundry-vtt/values.yaml
 ```
 
 This command deploys a Foundry VTT dedicated server with sensible defaults.
@@ -55,10 +55,10 @@ This command deploys a Foundry VTT dedicated server with sensible defaults.
 
 ## Uninstalling the Chart
 
-To uninstall/delete the `my-release` deployment:
+To uninstall/delete the `foundry-vtt` deployment:
 
 ```bash
-$ helm uninstall my-release
+$ helm uninstall foundry-vtt
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
@@ -70,7 +70,7 @@ Refer to [values.yaml](values.yaml) for the full run-down on defaults. These are
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
 ```bash
-$ helm install my-release \
+$ helm install foundry-vtt \
     --set foundryvtt.adminPassword='MyPa$$word' \
     foundry-vtt/foundry-vtt
 ```
@@ -78,7 +78,7 @@ $ helm install my-release \
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install my-release -f values.yaml foundry-vtt/foundry-vtt
+$ helm install foundry-vtt -f values.yaml foundry-vtt/foundry-vtt
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
@@ -114,13 +114,9 @@ evaluated in the following order of precedence:
 A distribution can be downloaded and placed into a cache directory. The
 distribution's name must be of the form: `foundryvtt-0.7.10.zip`
 
-> Before Felddy's v9.255.1 and v10.260.1 container you Must set this paramenter,
-> after those versions the `/data/container_cache` is created by default and
-> used.
-
 | Name                | Purpose                                                                                                                                                                                                                                             |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| container.cache     | Optional: Set a different path to cache downloads of the Foundry distribution archive and speed up subsequent container startups. By default Felddy's container create the `/data/container_cache` if no value is specified                         |
+| container.cache     | Optional: Set a different path to cache downloads of the Foundry distribution archive and speed up subsequent container startups. By default Felddy's container creates the `/data/container_cache` if no value is specified                         |
 | container.cacheSize | Set the maximum number of distribution versions to keep in the cache. The minimum is `1`. When the limit is exceeded, the oldest versions (lowest version numbers) are removed first. Unset to disable cache size management and keep all versions. |
 
 
@@ -214,7 +210,7 @@ helm repo update
 ### Install the cert-manager Helm chart
 
 > **Important:**
-> If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false flag to your kubectl apply command above else you will receive a validation error relating to the x-kubernetes-preserve-unknown-fields field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation. Reference official [documentation](https://cert-manager.io/docs/installation/kubernetes/)
+> If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false` flag to your `kubectl apply` command above else you will receive a validation error relating to the `x-kubernetes-preserve-unknown-fields` field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation. Reference official [documentation](https://cert-manager.io/docs/installation/kubernetes/)
 
 ```
 helm install \
