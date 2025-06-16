@@ -22,7 +22,16 @@ spec:
     {{- end }}
       serviceAccountName: {{ include "foundry-vtt.serviceAccountName" . }}
       securityContext:
+        {{- if .Values.container.uid }}
+        runAsUser: {{ .Values.container.uid }}
+        {{- end }}
+        {{- if .Values.container.gid }}
+        runAsGroup: {{ .Values.container.gid }}
+        fsGroup: {{ .Values.container.gid }} 
+        {{- end }}
+        {{- if and (not .Values.container.uid ) (not .Values.container.gid) }}
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+        {{- end }}
       dnsPolicy: {{ .Values.dnsPolicy }}
       {{- if .Values.dnsConfig }}
       dnsConfig:
@@ -31,13 +40,6 @@ spec:
       containers:
       - name: {{ .Chart.Name }}
         securityContext:
-          {{- if .Values.container.uid }}
-          runAsUser: {{ .Values.container.uid }}
-          {{- end }}
-          {{- if .Values.container.gid }}
-          runAsGroup: {{ .Values.container.gid }}
-          fsGroup: {{ .Values.container.gid }} 
-          {{- end }}
           {{- toYaml .Values.securityContext | nindent 12 }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
