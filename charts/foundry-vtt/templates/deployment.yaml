@@ -92,10 +92,6 @@ spec:
           - name: TIMEZONE
             value: {{ .Values.container.timezone }}
           {{- end }}
-          {{- if .Values.container.uid }}
-          - name: FOUNDRY_UID
-            value: {{ .Values.container.uid | quote }}
-          {{- end }}
           {{- if .Values.container.verbose }}
           - name: CONTAINER_VERBOSE
             value: {{ .Values.container.verbose | quote }}
