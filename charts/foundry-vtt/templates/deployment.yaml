@@ -29,7 +29,7 @@ spec:
         runAsGroup: {{ .Values.container.gid }}
         fsGroup: {{ .Values.container.gid }} 
         {{- end }}
-        {{- if and (not .Values.container.uid ) (not .Values.container.gid) }}
+        {{- if and (not .Values.container.uid) (not .Values.container.gid) (.Values.podSecurityContext) }}
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
         {{- end }}
       dnsPolicy: {{ .Values.dnsPolicy }}
