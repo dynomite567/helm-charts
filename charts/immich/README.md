@@ -1,5 +1,9 @@
 # Immich
 
+<!-- BADGES/ -->
+![GitHub Release](https://img.shields.io/github/v/release/dynomite567/helm-charts?filter=immich*)
+[![Release Charts](https://github.com/dynomite567/helm-charts/actions/workflows/release.yaml/badge.svg)](https://github.com/dynomite567/helm-charts/actions/workflows/release.yaml)
+
 **Cloned from [immich-app/immich-charts](https://github.com/immich-app/immich-charts)**
 
 Installs [Immich](https://github.com/immich-app/immich), a self-hosted photo and video backup solution directly from your mobile phone. 
