@@ -19,5 +19,4 @@ You can then run `helm search repo dyno-charts` to see the charts.
 
 ## License
 
-<!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
-[MIT License](https://github.com/immich-app/immich-charts/blob/main/LICENSE).
+[MIT License](https://github.com/dynomite567/helm-charts/blob/main/LICENSE).
