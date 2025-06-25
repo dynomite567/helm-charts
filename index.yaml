@@ -1,0 +1,57 @@
+apiVersion: v1
+entries:
+  foundry-vtt:
+  - apiVersion: v2
+    appVersion: v13.345
+    created: "2025-06-25T03:18:25.880740112Z"
+    description: Foundry Virtual Tabletop
+    digest: 558f09ea4dc4ac40ef46b00f8db232b5aac7e79c9c3e89df839964808722b054
+    icon: https://artifacthub.io/image/3e8ce5cf-7afe-4032-bae2-500b17e64b11@1x
+    keywords:
+    - game
+    - server
+    - vtt
+    - virtualtabletop
+    - foundryvtt
+    - foundry
+    maintainers:
+    - email: 17055345+dynomite567@users.noreply.github.com
+      name: dynomite567
+    name: foundry-vtt
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/foundry-vtt
+    type: application
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/foundry-vtt-13.345.1/foundry-vtt-13.345.1.tgz
+    version: 13.345.1
+  immich:
+  - apiVersion: v2
+    appVersion: v1.135.3
+    created: "2025-06-25T03:18:26.014439624Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 1.4.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.0.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.13.2
+    description: A chart to power Immich (immich.app) running on kubernetes
+    digest: 24ebb908769045bc39cd69c66a2d2c5e4437b71bd9a5d4054015c9418e4eb679
+    home: https://immich.app/
+    icon: https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg
+    maintainers:
+    - email: 17055345+dynomite567@users.noreply.github.com
+      name: dynomite567
+    name: immich
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/charts/immich
+    - https://github.com/immich-app/immich
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/immich-0.9.3/immich-0.9.3.tgz
+    version: 0.9.3
+generated: "2025-06-25T03:18:26.01444859Z"
