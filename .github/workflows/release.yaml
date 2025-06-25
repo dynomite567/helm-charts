@@ -38,4 +38,12 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Push OCI Charts
-        run: helm push .cr-release-packages/*.tgz oci://ghcr.io/${{ github.repository }}
+        run: |
+          files=$(find .output_chart/ -type f -name "*.tgz")
+          for pkg in $files; do
+            echo "Pushing ${pkg} to ghcr.io/$owner"
+            if [ -z "${pkg:-}" ]; then
+              break
+            fi
+            helm push "${pkg}" oci://ghcr.io/${{ github.repository }}
+          done
