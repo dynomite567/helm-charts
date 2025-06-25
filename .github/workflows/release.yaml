@@ -39,7 +39,7 @@ jobs:
       
       - name: Push OCI Charts
         run: |
-          files=$(find .output_chart/ -type f -name "*.tgz")
+          files=$(find .cr-release-packages/ -type f -name "*.tgz")
           for pkg in $files; do
             echo "Pushing ${pkg} to ghcr.io/$owner"
             if [ -z "${pkg:-}" ]; then
