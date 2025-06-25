@@ -1,0 +1,27 @@
+apiVersion: v1
+entries:
+  foundry-vtt:
+  - apiVersion: v2
+    appVersion: v13.345
+    created: "2025-06-25T01:56:22.603428773Z"
+    description: Foundry Virtual Tabletop
+    digest: 83db38534f0f5e2dd3896cdff3f46180ff034a7c22986040d10cc1411d7b1e6b
+    icon: https://artifacthub.io/image/3e8ce5cf-7afe-4032-bae2-500b17e64b11@1x
+    keywords:
+    - game
+    - server
+    - vtt
+    - virtualtabletop
+    - foundryvtt
+    - foundry
+    maintainers:
+    - email: hc@dynomitecent.mozmail.com
+      name: dynomite567
+    name: foundry-vtt
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/foundry-vtt
+    type: application
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/foundry-vtt-13.345.1/foundry-vtt-13.345.1.tgz
+    version: 13.345.1
+generated: "2025-06-25T01:56:22.603439323Z"
