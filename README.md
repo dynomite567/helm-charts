@@ -17,6 +17,10 @@ helm repo add dyno-charts https://dynomite567.github.io/helm-charts
 
 You can then run `helm search repo dyno-charts` to see the charts.
 
+## List of Charts
+* [foundry-vtt](https://github.com/dynomite567/helm-charts/tree/main/charts/foundry-vtt)
+* [immich](https://github.com/dynomite567/helm-charts/tree/main/charts/immich)
+
 ## License
 
 [MIT License](https://github.com/dynomite567/helm-charts/blob/main/LICENSE).
