@@ -31,6 +31,7 @@ jobs:
           CR_SKIP_EXISTING: true
 
       - name: Check for OCI Charts
+        id: ocicheck
         run: |
           FILE=.cr-release-packages/
           if [ -d "$FILE" ]; then
@@ -40,7 +41,7 @@ jobs:
           fi
 
       - name: Login to GitHub Container Registry
-        if: ${{ steps.version.outputs.oci_release == 'true' }}
+        if: ${{ steps.ocicheck.outputs.oci_release == 'true' }}
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772
         with:
           registry: ghcr.io
@@ -48,7 +49,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Push OCI Charts
-        if: ${{ steps.version.outputs.oci_release == 'true' }}
+        if: ${{ steps.ocicheck.outputs.oci_release == 'true' }}
         run: |
           files=$(find .cr-release-packages/ -type f -name "*.tgz")
           for pkg in $files; do
