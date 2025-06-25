@@ -1,5 +1,7 @@
 # Dynomite567's Helm Charts
 
+Personal Helm chart repository that introduces minor adjustments to existing charts.
+
 The code is provided as-is with no warranties.
 
 ## Usage
