@@ -1,7 +1,7 @@
 # Immich
 
 <!-- BADGES/ -->
-![GitHub Release](https://img.shields.io/github/v/release/dynomite567/helm-charts?filter=immich*)
+[![GitHub Release](https://img.shields.io/github/v/release/dynomite567/helm-charts?filter=immich*)](https://github.com/dynomite567/helm-charts/tree/main/charts/immich)
 [![Release Charts](https://github.com/dynomite567/helm-charts/actions/workflows/release.yaml/badge.svg)](https://github.com/dynomite567/helm-charts/actions/workflows/release.yaml)
 
 **Cloned from [immich-app/immich-charts](https://github.com/immich-app/immich-charts)**
