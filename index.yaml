@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   foundry-vtt:
   - apiVersion: v2
+    appVersion: v13.346
+    created: "2025-07-03T05:23:09.834847152Z"
+    description: Foundry Virtual Tabletop
+    digest: 89b1b643ef438c9f6bd9fe65881eb3ad24e56d6208a17a8d2e84e8d89bd9df9e
+    icon: https://artifacthub.io/image/3e8ce5cf-7afe-4032-bae2-500b17e64b11@1x
+    keywords:
+    - game
+    - server
+    - vtt
+    - virtualtabletop
+    - foundryvtt
+    - foundry
+    maintainers:
+    - email: 17055345+dynomite567@users.noreply.github.com
+      name: dynomite567
+    name: foundry-vtt
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/foundry-vtt
+    type: application
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/foundry-vtt-13.346.0/foundry-vtt-13.346.0.tgz
+    version: 13.346.0
+  - apiVersion: v2
     appVersion: v13.345
     created: "2025-06-25T03:18:25.880740112Z"
     description: Foundry Virtual Tabletop
@@ -54,4 +77,4 @@ entries:
     urls:
     - https://github.com/dynomite567/helm-charts/releases/download/immich-0.9.3/immich-0.9.3.tgz
     version: 0.9.3
-generated: "2025-06-25T03:18:26.01444859Z"
+generated: "2025-07-03T05:23:09.956153719Z"
