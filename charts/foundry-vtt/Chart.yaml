@@ -6,8 +6,6 @@ icon: https://artifacthub.io/image/3e8ce5cf-7afe-4032-bae2-500b17e64b11@1x
 version: 13.346.0
 appVersion: "v13.346"
 keywords:
-  - game
-  - server
   - vtt
   - virtualtabletop
   - foundryvtt

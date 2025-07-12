@@ -9,6 +9,8 @@ icon: https://raw.githubusercontent.com/immich-app/immich/main/design/immich-log
 sources:
   - https://github.com/dynomite567/helm-charts/tree/main/charts/immich
   - https://github.com/immich-app/immich
+keywords:
+  - immich
 maintainers:
   - name: dynomite567
     email: 17055345+dynomite567@users.noreply.github.com
