@@ -77,4 +77,55 @@ entries:
     urls:
     - https://github.com/dynomite567/helm-charts/releases/download/immich-0.9.3/immich-0.9.3.tgz
     version: 0.9.3
-generated: "2025-07-03T05:23:09.956153719Z"
+  librechat:
+  - apiVersion: v2
+    appVersion: v0.7.9
+    created: "2025-07-28T18:58:01.5244803Z"
+    dependencies:
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.3.0
+    - condition: meilisearch.enabled
+      name: meilisearch
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.11.0
+    - condition: librechat-rag-api.enabled
+      name: librechat-rag-api
+      repository: file://../librechat-rag-api
+      version: 0.5.2
+    description: A Helm chart for LibreChat
+    digest: df4cc0ad9d4d15e80c56a5faa5998d989e65251cb1685f2988bac3a588e1a4a5
+    home: https://www.librechat.ai
+    icon: https://raw.githubusercontent.com/danny-avila/LibreChat/refs/heads/main/client/public/assets/logo.svg
+    keywords:
+    - librechat
+    maintainers:
+    - email: 17055345+dynomite567@users.noreply.github.com
+      name: dynomite567
+    name: librechat
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/charts/librechat
+    - https://github.com/danny-avila/LibreChat
+    type: application
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/librechat-1.8.9/librechat-1.8.9.tgz
+    version: 1.8.9
+  librechat-rag-api:
+  - apiVersion: v2
+    appVersion: v0.4.0
+    created: "2025-07-28T18:58:01.712944554Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.38
+    description: A Helm chart for LibreChat
+    digest: 5e61dbe2839cc7425c7a56f4af1ded61ab503442a36b3c7f6a4fea616079c656
+    home: https://www.librechat.ai
+    name: librechat-rag-api
+    type: application
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/librechat-rag-api-0.5.2/librechat-rag-api-0.5.2.tgz
+    version: 0.5.2
+generated: "2025-07-28T18:58:01.712972546Z"
