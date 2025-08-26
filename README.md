@@ -20,6 +20,8 @@ You can then run `helm search repo dyno-charts` to see the charts.
 ## List of Charts
 * [foundry-vtt](https://github.com/dynomite567/helm-charts/tree/main/charts/foundry-vtt)
 * [immich](https://github.com/dynomite567/helm-charts/tree/main/charts/immich)
+* [librechat](https://github.com/dynomite567/helm-charts/tree/main/charts/librechat)
+* [librechat-rag-api](https://github.com/dynomite567/helm-charts/tree/main/charts/librechat-rag-api)
 
 ## License
 
