@@ -2,8 +2,8 @@ apiVersion: v2
 name: librechat
 description: A Helm chart for LibreChat
 type: application
-version: 1.8.9
-appVersion: "v0.7.9"
+version: 1.8.10
+appVersion: "v0.8.0-rc2"
 home: https://www.librechat.ai
 icon: https://raw.githubusercontent.com/danny-avila/LibreChat/refs/heads/main/client/public/assets/logo.svg
 
