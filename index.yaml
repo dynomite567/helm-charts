@@ -2,6 +2,27 @@ apiVersion: v1
 entries:
   foundry-vtt:
   - apiVersion: v2
+    appVersion: v13.347
+    created: "2025-08-26T05:45:12.893936892Z"
+    description: Foundry Virtual Tabletop
+    digest: f2e64b84c0933e38b7cf6426113df293eda76d2c8bf8448ddb7aed5b4d097e3f
+    icon: https://artifacthub.io/image/3e8ce5cf-7afe-4032-bae2-500b17e64b11@1x
+    keywords:
+    - vtt
+    - virtualtabletop
+    - foundryvtt
+    - foundry
+    maintainers:
+    - email: 17055345+dynomite567@users.noreply.github.com
+      name: dynomite567
+    name: foundry-vtt
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/foundry-vtt
+    type: application
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/foundry-vtt-13.347.0/foundry-vtt-13.347.0.tgz
+    version: 13.347.0
+  - apiVersion: v2
     appVersion: v13.346
     created: "2025-07-03T05:23:09.834847152Z"
     description: Foundry Virtual Tabletop
@@ -161,4 +182,4 @@ entries:
     urls:
     - https://github.com/dynomite567/helm-charts/releases/download/librechat-rag-api-0.5.2/librechat-rag-api-0.5.2.tgz
     version: 0.5.2
-generated: "2025-08-26T00:19:38.227504857Z"
+generated: "2025-08-26T05:45:12.893955357Z"
