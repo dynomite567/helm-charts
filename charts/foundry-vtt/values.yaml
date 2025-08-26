@@ -38,7 +38,7 @@ serviceAccount:
 image:
   pullPolicy: IfNotPresent
   repository: felddy/foundryvtt
-  tag: "13.346.0"
+  tag: "13.347.0"
 
 ## @param imagePullSecrets Credentials for Docker private repository.
 imagePullSecrets: []
