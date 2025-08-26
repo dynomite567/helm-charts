@@ -79,6 +79,39 @@ entries:
     version: 0.9.3
   librechat:
   - apiVersion: v2
+    appVersion: v0.8.0-rc2
+    created: "2025-08-26T00:19:38.227488827Z"
+    dependencies:
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.3.0
+    - condition: meilisearch.enabled
+      name: meilisearch
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.11.0
+    - condition: librechat-rag-api.enabled
+      name: librechat-rag-api
+      repository: file://../librechat-rag-api
+      version: 0.5.2
+    description: A Helm chart for LibreChat
+    digest: f5a24950babc039d4c7381e470434d53c21f4ba635d0f0cf2cca1d7ce2366ddc
+    home: https://www.librechat.ai
+    icon: https://raw.githubusercontent.com/danny-avila/LibreChat/refs/heads/main/client/public/assets/logo.svg
+    keywords:
+    - librechat
+    maintainers:
+    - email: 17055345+dynomite567@users.noreply.github.com
+      name: dynomite567
+    name: librechat
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/charts/librechat
+    - https://github.com/danny-avila/LibreChat
+    type: application
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/librechat-1.8.10/librechat-1.8.10.tgz
+    version: 1.8.10
+  - apiVersion: v2
     appVersion: v0.7.9
     created: "2025-07-28T18:58:01.5244803Z"
     dependencies:
@@ -128,4 +161,4 @@ entries:
     urls:
     - https://github.com/dynomite567/helm-charts/releases/download/librechat-rag-api-0.5.2/librechat-rag-api-0.5.2.tgz
     version: 0.5.2
-generated: "2025-07-28T18:58:01.712972546Z"
+generated: "2025-08-26T00:19:38.227504857Z"
