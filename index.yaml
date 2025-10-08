@@ -112,6 +112,37 @@ entries:
     version: 13.345.1
   immich:
   - apiVersion: v2
+    appVersion: v2.0.1
+    created: "2025-10-08T02:24:17.58970311Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 1.4.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.0.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 23.1.1
+    description: A chart to power Immich (immich.app) running on kubernetes
+    digest: 58bcaab0eebc170e7e0f58a3eb47d02eba23a9f55051fd26aeaad0b013d5d18f
+    home: https://immich.app/
+    icon: https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg
+    keywords:
+    - immich
+    maintainers:
+    - email: 17055345+dynomite567@users.noreply.github.com
+      name: dynomite567
+    name: immich
+    sources:
+    - https://github.com/dynomite567/helm-charts/tree/main/charts/immich
+    - https://github.com/immich-app/immich
+    urls:
+    - https://github.com/dynomite567/helm-charts/releases/download/immich-0.9.4/immich-0.9.4.tgz
+    version: 0.9.4
+  - apiVersion: v2
     appVersion: v1.135.3
     created: "2025-06-25T03:18:26.014439624Z"
     dependencies:
@@ -257,4 +288,4 @@ entries:
     urls:
     - https://github.com/dynomite567/helm-charts/releases/download/librechat-rag-api-0.5.2/librechat-rag-api-0.5.2.tgz
     version: 0.5.2
-generated: "2025-10-06T23:09:01.629284037Z"
+generated: "2025-10-08T02:24:17.589730972Z"
